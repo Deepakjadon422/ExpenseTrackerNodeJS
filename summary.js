@@ -1,0 +1,2 @@
+import {getSummary} from "../services/expenseService.js";
+export async function runSummary(o){const t=await getSummary(o.month); if(o.month===undefined) console.log(`Total expenses: $${t.toFixed(2)}`); else {const m=Number(o.month), n=new Date(2000,m-1,1).toLocaleString("en-US",{month:"long"}); console.log(`Total expenses for ${n}: $${t.toFixed(2)}`);}}

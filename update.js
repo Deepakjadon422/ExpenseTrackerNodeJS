@@ -1,0 +1,2 @@
+import {updateExpense} from "../services/expenseService.js";
+export async function runUpdate(o){const e=await updateExpense(o.id,o.description,o.amount); console.log(`Expense updated successfully (ID: ${e.id})`);}

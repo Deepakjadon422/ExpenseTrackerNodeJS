@@ -1,0 +1,2 @@
+import {listExpenses} from "../services/expenseService.js";
+export async function runList(){const es=await listExpenses(); if(!es.length){console.log("No expenses found.");return;} console.log(`${"ID".padEnd(5)}${"Date".padEnd(12)}${"Description".padEnd(25)}${"Amount".padStart(12)}`); for(const e of es) console.log(`${String(e.id).padEnd(5)}${e.date.padEnd(12)}${e.description.slice(0,24).padEnd(25)}$${e.amount.toFixed(2).padStart(11)}`);}
